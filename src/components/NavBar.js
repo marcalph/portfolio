@@ -9,7 +9,7 @@ const NavBarStyles = styled.div`
   top: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--dark-bg);
+  background: var(--dark);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,7 +20,7 @@ const NavBarStyles = styled.div`
       border-radius: 8px;
       transition: 0.3s ease background-color;
       &:hover {
-        background-color: var(--deep-dark);
+        background-color: var(--darker);
       }
     }
     a {
@@ -28,7 +28,7 @@ const NavBarStyles = styled.div`
       font-family: 'RobotoMono Regular';
       padding: 1rem 2rem;
       font-size: 2rem;
-      color: var(--gray-1);
+      color: var(--light);
       outline: none;
     }
     .active {
@@ -62,7 +62,7 @@ const NavBarStyles = styled.div`
     .navItems {
       --top: 1rem;
       transition: 0.3s ease transform;
-      background-color: var(--deep-dark);
+      background-color: var(--darker);
       padding: 2rem;
       width: 90%;
       max-width: 300px;

@@ -7,6 +7,24 @@ import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 
 const IntroStyles = styled.div`
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
   .intro {
     height: 100vh;
     min-height: 1000px;
@@ -35,7 +53,7 @@ const IntroStyles = styled.div`
     width: 100%;
     height: 600px;
     margin: 0 auto;
-    border: 2px solid var(--gray-1);
+    border: 2px solid var(--light);
   }
   .intro__info {
     margin-top: -18rem;
@@ -161,7 +179,11 @@ export default function Intro() {
           <div className="intro__social">
             <div className="intro__social_indicator">
               <p>follow</p>
-              <img src={SocialMediaArrow} alt="social media arrow" />
+              <img
+                src={SocialMediaArrow}
+                alt="social media arrow"
+                className="bounce"
+              />
             </div>
             <div className="intro__social_text">
               <ul>

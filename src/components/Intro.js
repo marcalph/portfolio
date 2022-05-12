@@ -6,8 +6,8 @@ import Ptext from './Ptext';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 
-const HeadingStyles = styled.div`
-  .heading {
+const IntroStyles = styled.div`
+  .intro {
     height: 100vh;
     min-height: 1000px;
     text-align: center;
@@ -16,7 +16,7 @@ const HeadingStyles = styled.div`
     justify-content: center;
     position: relative;
   }
-  .heading__heading {
+  .intro__intro {
     font-size: 2rem;
     margin-bottom: -4rem;
     position: relative;
@@ -24,24 +24,24 @@ const HeadingStyles = styled.div`
       display: inline-block;
       width: 100%;
     }
-    .heading__name {
+    .intro__name {
       font-size: 7rem;
       font-family: 'Montserrat SemiBold';
       color: var(--white);
     }
   }
-  .heading__image {
+  .intro__image {
     max-width: 900px;
     width: 100%;
     height: 600px;
     margin: 0 auto;
     border: 2px solid var(--gray-1);
   }
-  .heading__info {
+  .intro__info {
     margin-top: -18rem;
   }
-  .heading__social,
-  .heading__scrollDown {
+  .intro__social,
+  .intro__scrollDown {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -49,14 +49,14 @@ const HeadingStyles = styled.div`
     bottom: 20px;
     width: 50px;
   }
-  .heading__social {
+  .intro__social {
     left: 50px;
   }
-  .heading__scrollDown {
+  .intro__scrollDown {
     right: 50px;
   }
-  .heading__social_indicator,
-  .heading_scrollDown {
+  .intro__social_indicator,
+  .intro__scrollDown {
     width: 50px;
     p {
       font-size: 1.6rem;
@@ -71,12 +71,12 @@ const HeadingStyles = styled.div`
       object-fit: contain;
     }
   }
-  .heading__scrollDown {
+  .intro__scrollDown {
     img {
       max-height: 70px;
     }
   }
-  .heading__social_text {
+  .intro__social_text {
     ul {
       li {
         margin-bottom: 1rem;
@@ -91,27 +91,27 @@ const HeadingStyles = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
-    .heading {
+    .intro {
       min-height: 750px;
     }
-    .heading__heading {
+    .intro__intro {
       font-size: 1.4rem;
       margin-bottom: -3rem;
-      .heading__name {
+      .intro__name {
         height: 4.5rem;
       }
     }
-    .heading__img {
+    .intro__img {
       height: 300px;
     }
-    .heading__info {
+    .intro__info {
       margin-top: 3rem;
     }
-    .heading__social {
+    .intro__social {
       left: 0px;
       bottom: 15%;
       width: 20px;
-      .heading__social_indicator {
+      .intro__social_indicator {
         width: 20px;
         p {
           font-size: 1.2rem;
@@ -120,32 +120,50 @@ const HeadingStyles = styled.div`
           max-height: 22px;
         }
       }
+      .intro__social_text {
+        ul {
+          li {
+            a {
+              font-size: 1.2rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .intro__scrollDown {
+      right: 0;
+      width: 20px;
+      gap: 1rem;
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 `;
 
-export default function Heading() {
+export default function Intro() {
   return (
-    <HeadingStyles>
-      <div className="heading">
+    <IntroStyles>
+      <div className="intro">
         <div className="container">
-          <h1 className="heading__heading">
+          <h1 className="intro__intro">
             <span>Hello this is</span>
-            <span className="heading__name">me</span>
+            <span className="intro__name">me</span>
           </h1>
-          <div className="heading__image">
+          <div className="intro__image">
             <img src={hero} alt="" />
           </div>
-          <div className="heading__info">
+          <div className="intro__info">
             <Ptext>This is my mini bio for front page. dwedew.</Ptext>
             <Button btnLink="/projects" btnText="Works" />
           </div>
-          <div className="heading__social">
-            <div className="heading__social_indicator">
+          <div className="intro__social">
+            <div className="intro__social_indicator">
               <p>follow</p>
               <img src={SocialMediaArrow} alt="social media arrow" />
             </div>
-            <div className="heading__social_text">
+            <div className="intro__social_text">
               <ul>
                 <li>
                   <a
@@ -177,12 +195,12 @@ export default function Heading() {
               </ul>
             </div>
           </div>
-          <div className="heading__scrollDown">
+          <div className="intro__scrollDown">
             <p>Scroll</p>
             <img src={ScrollDownArrow} alt="" />
           </div>
         </div>
       </div>
-    </HeadingStyles>
+    </IntroStyles>
   );
 }

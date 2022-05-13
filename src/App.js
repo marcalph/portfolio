@@ -5,13 +5,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Intro from './components/Intro';
+import IntroSection from './components/IntroSection';
 
 export default function App() {
   return (
     <div>
       <Router>
-        <Intro />
         <NavBar />
         <Switch>
           <Route path="/about">

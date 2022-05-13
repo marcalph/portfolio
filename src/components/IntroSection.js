@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 import hero from '../assets/images/hero.png';
@@ -6,7 +7,7 @@ import Ptext from './Ptext';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 
-const IntroStyles = styled.div`
+const IntroSectionStyles = styled.div`
   .bounce {
     animation: bounce 2s infinite;
   }
@@ -160,9 +161,9 @@ const IntroStyles = styled.div`
   }
 `;
 
-export default function Intro() {
+export default function IntroSection() {
   return (
-    <IntroStyles>
+    <IntroSectionStyles>
       <div className="intro">
         <div className="container">
           <h1 className="intro__intro">
@@ -173,7 +174,10 @@ export default function Intro() {
             <img src={hero} alt="" />
           </div>
           <div className="intro__info">
-            <Ptext>This is my mini bio for front page. dwedew.</Ptext>
+            <Ptext>
+              This is my mini bio. Its a very pleasure. M.uch appreciated.
+              Lets go with homemade lorenm ipsudsolakfjdhsfs
+            </Ptext>
             <Button btnLink="/projects" btnText="Works" />
           </div>
           <div className="intro__social">
@@ -223,6 +227,6 @@ export default function Intro() {
           </div>
         </div>
       </div>
-    </IntroStyles>
+    </IntroSectionStyles>
   );
 }

@@ -15,8 +15,8 @@ const AboutSectionStyle = styled.div`
     text-align: left;
   }
   .aboutSection__left,
-  .aboutSectyion__right {
-    flex: 1
+  .aboutSection__right {
+    flex: 1;
   }
   .section-title {
     text-align: left;
@@ -40,7 +40,7 @@ const AboutSectionStyle = styled.div`
       flex: 3;
     }
   }
-  @media only screen and (max-width:768px) {
+  @media only screen and (max-width: 768px) {
     .container {
       flex-direction: column;
       text-align: center;
